@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Költésfigyelő</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <!-- Budget -->
+                <div class="total-amount-container">
+                    <h3>Pénzkeret</h3>
+                    <p class="hide error" id="budget-error">
+                        Az érték nem lehet üres vagy negatív szám!
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Teljes összeg">
+                    <button class="submit" id="total-amount-button">Keret beállítása</button>
+                </div>
+
+                <!-- Kiadások -->
+                <div class="user-amount-container">
+                    <h3>Kiadások</h3>
+                    <p class="hide error" id="product-title-error">Az érték nem lehet üres</p>
+                    <input type="text" class="product-title" id="product-title" placeholder="Írd be a termék neve">
+                    <input type="number" id="user-amount" placeholder="Írd be a termék árát">
+                    <button class="submit" id="check-amount">Hozzáadás</button>
+                </div>
+            </div>
+            <!-- Output -->
+            <div class="output-container flex-space">
+                <div>
+                    <p>Teljes keret</p>
+                    <span id="amount">0</span>
+                </div>
+                <div>
+                    <p>Kiadások</p>
+                    <span id="expenditure-value">0</span>
+                </div>
+                <div>
+                    <p>Egyenleg</p>
+                    <span id="balance-amount">0</span>
+                </div>
+            </div>
+        </div>
+        <!-- List -->
+        <div class="list">
+            <h3>Kiadáslista</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
